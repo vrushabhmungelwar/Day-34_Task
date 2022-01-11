@@ -7,15 +7,7 @@ import { Card, CardActions, CardContent } from "@mui/material";
 import InfoIcon from "@mui/icons-material/Info";
 import { useHistory } from "react-router-dom";
 
-export function Movie({
-  name,
-  poster,
-  rating,
-  summary,
-  id,
-  deleteButton,
-  editButton,
-}) {
+export function Movie({ name, poster, rating, summary, id }) {
   const [show, setShow] = useState(true);
   const history = useHistory();
   const styles = {
@@ -61,8 +53,7 @@ export function Movie({
           {summary}
         </p>
         <CardActions>
-          <Counter /> {deleteButton}
-          {editButton}
+          <Counter />
         </CardActions>
       </CardContent>
     </Card>

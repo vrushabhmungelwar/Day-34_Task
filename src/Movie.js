@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Counter } from "./Counter.js";
 import IconButton from "@mui/material/IconButton";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -53,7 +52,6 @@ export function Movie({ name, poster, rating, summary, id }) {
           {summary}
         </p>
         <CardActions>
-          <Counter />
         </CardActions>
       </CardContent>
     </Card>

@@ -1,3 +1,7 @@
+body {
+  margin: 20px;
+  font-family: "poppins", sans-serif;
+}
 .movie-container {
   width: 340px;
   height: min-content;
@@ -23,28 +27,12 @@
 .movie-summary {
   margin-top: 8px;
 }
-body {
-  margin: 20px;
-  font-family: "poppins", sans-serif;
-}
 .movie-list {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.counter-container {
-  display: flex;
-  gap: 10px;
-}
-.likes-dislikes {
-  font-size: 20px;
-}
-.movie-show-button {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
 .add-movie-form {
   margin: 20px;
   display: flex;
@@ -52,22 +40,3 @@ body {
   flex-direction: column;
 }
 
-nav {
-  font-size: 24px;
-  display: flex;
-  gap: 24px;
-  margin: 20px;
-}
-.not-found-image {
-  width: 100%;
-  object-fit: cover;
-}
-.not-found-container {
-  text-align: center;
-  color: teal;
-}
-
-.movie-detail-container {
-  padding: 24px;
-  max-width: 50rem;
-}

@@ -1,58 +1,24 @@
-import { useState } from "react";
-import IconButton from "@mui/material/IconButton";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Card, CardActions, CardContent } from "@mui/material";
-import InfoIcon from "@mui/icons-material/Info";
-import { useHistory } from "react-router-dom";
 
 export function Movie({ name, poster, rating, summary, id }) {
-  const [show, setShow] = useState(true);
-  const history = useHistory();
   const styles = {
     color: rating < 8 ? "crimson" : "green",
     fontWeight: "bold",
   };
-  const summaryStyles = { display: show ? "block" : "none" };
   return (
     <Card className="movie-container">
       <img className="movie-poster" src={poster} alt={name} />
       <CardContent>
         <div className="movie-specs">
-          <h3 className="movie-name">
-            {name}
-            <IconButton
-              onClick={() => {
-                console.log(id);
-                history.push("/movies/" + id);
-              }}
-              className="movie-show-button"
-              aria-label="hide"
-              color="primary"
-            >
-              <InfoIcon />
-            </IconButton>
-
-            <IconButton
-              onClick={() => setShow(!show)}
-              className="movie-show-button"
-              aria-label="hide"
-              color="primary"
-            >
-              {show ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-            </IconButton>
-          </h3>
+          <h3 className="movie-name">{name}</h3>
 
           <p className="movie-Rating" style={styles}>
             ⭐{rating}
           </p>
         </div>
 
-        <p className="movie-summary" style={summaryStyles}>
-          {summary}
-        </p>
-        <CardActions>
-        </CardActions>
+        <p className="movie-summary">{summary}</p>
+        <CardActions></CardActions>
       </CardContent>
     </Card>
   );

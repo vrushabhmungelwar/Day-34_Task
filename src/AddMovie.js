@@ -7,6 +7,8 @@ import { API_URL } from "./global-constants";
 
 export const formValidationSchema = yup.object({
   name: yup.string().required("why not fill this name? 😊"),
+  genre: yup.string().required("why not fill this name? 😊"),
+
   poster: yup
     .string()
     .required("why not fill this poster? 😊")
@@ -33,6 +35,7 @@ export function AddMovie() {
     useFormik({
       initialValues: {
         name: "",
+        genre: "",
         poster: "",
         rating: "",
         summary: "",
@@ -70,7 +73,17 @@ export function AddMovie() {
         helperText={errors.name && touched.name && errors.name}
         variant="standard"
       />
-
+      <TextField
+        id="genre"
+        name="genre"
+        value={values.genre}
+        onChange={handleChange}
+        onBlur={handleBlur}
+        label="Genre"
+        error={errors.genre && touched.genre}
+        helperText={errors.genre && touched.genre && errors.genre}
+        variant="standard"
+      />
       <TextField
         id="poster"
         name="poster"

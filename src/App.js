@@ -44,7 +44,6 @@ export default function App() {
           <Route exact path="/">
             <Welcome />
           </Route>
-
           <Route path="/movies">
             <MovieList />
           </Route>
